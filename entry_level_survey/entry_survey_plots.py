@@ -92,4 +92,80 @@ plt.savefig('entry_survey_results.pdf')
 # show the figure in an interactive window
 plt.show()
 
+# ------------------------- prerequisites survey -------------------
+# load csv data file
+data = pandas.read_csv('Installation of required software.csv')
+cols = data.columns
 
+# create figure and title
+fig = plt.figure()
+fig.text(x=0.5,y=0.96,s='Prerequisites survey results ({0:d} responses)'.format(len(data)),ha='center',fontsize=16)
+
+
+# create pie chart from Q1 responses
+
+## extract data (responses are given as strings with items separated by ;)
+
+## find frequency of each item
+labels,freqs = np.unique(data[cols[1]].astype(str),return_counts=True)
+
+# shorten long labels and change 'nan' to 'no answer'
+for i in range(len(labels)):
+    if len(labels[i])>15:
+        labels[i] = labels[i][:15] + '...'
+    elif labels[i]=='nan':
+        labels[i] = 'No answer'
+
+## plot a pie chart in a subplot in the figure
+plt.subplot(221)
+plt.title('Q1: ' + cols[1],fontsize=10)
+
+plt.pie(freqs,labels=labels,shadow=True)
+
+
+# create pie chart from Q2 responses
+
+## extract data (responses are given as strings with items separated by ;)
+
+## find frequency of each item
+labels,freqs = np.unique(data[cols[2]].astype(str),return_counts=True)
+
+# shorten long labels and change 'nan' to 'no answer'
+for i in range(len(labels)):
+    if len(labels[i])>15:
+        labels[i] = labels[i][:15] + '...'
+    elif labels[i]=='nan':
+        labels[i] = 'No answer'
+
+
+## plot a pie chart in a subplot in the figure
+plt.subplot(222)
+plt.title('Q2: ' + cols[2].rstrip('(please remember that python >3.6 is required)'),fontsize=10)
+
+plt.pie(freqs,labels=labels,shadow=True)
+
+# create pie chart from Q3 responses
+
+## extract data (responses are given as strings with items separated by ;)
+
+## find frequency of each item
+labels,freqs = np.unique(data[cols[3]].astype(str),return_counts=True)
+
+# shorten long labels and change 'nan' to 'no answer'
+for i in range(len(labels)):
+    if len(labels[i])>15:
+        labels[i] = labels[i][:15] + '...'
+    elif labels[i]=='nan':
+        labels[i] = 'No answer'
+
+
+
+## plot a pie chart in a subplot in the figure
+plt.subplot(223)
+plt.title('Q3: ' + cols[3],fontsize=10)
+
+plt.pie(freqs,labels=labels,shadow=True)
+
+plt.savefig('prerequisites_survey_results.pdf')
+
+plt.show()

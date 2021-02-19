@@ -1,0 +1,16 @@
+﻿"Risposta numero","What is your operating system?","Which python installation method did you choose? (please remember that python >3.6 is required)","Which text editor/IDE are you going to use?"
+1,Linux,"From my package/app manager (such as apt in Ubuntu or the app manager in MAC OSX or Windows)",other
+2,Windows,"Installer from python.org",pyCharm
+3,Windows,"From my package/app manager (such as apt in Ubuntu or the app manager in MAC OSX or Windows)",other
+4,"MAC OSX","From my package/app manager (such as apt in Ubuntu or the app manager in MAC OSX or Windows)","jupyter notebook"
+5,"MAC OSX",Anaconda,"jupyter notebook"
+6,Windows,"Installer from python.org",other
+7,Windows,"Installer from python.org",atom
+8,Linux,"It was already present on my system",emacs
+9,Windows,Anaconda,"jupyter notebook"
+10,Windows,Anaconda,
+11,"MAC OSX","From my package/app manager (such as apt in Ubuntu or the app manager in MAC OSX or Windows)",other
+12,"MAC OSX",,emacs
+13,Windows,Anaconda,"jupyter notebook"
+14,Windows,Anaconda,"jupyter notebook"
+15,"MAC OSX","It was already present on my system",other
