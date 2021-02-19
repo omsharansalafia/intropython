@@ -7,7 +7,7 @@ plt.rcParams['figure.figsize']=10,12
 plt.rcParams['font.family']='Liberation Sans'
 
 # load csv data file
-data = pandas.read_csv('entry_survey_responses.csv')
+data = pandas.read_csv('Introduction to Python programming - entry survey.csv')
 cols = data.columns
 
 # create figure and title
@@ -91,3 +91,5 @@ plt.savefig('entry_survey_results.pdf')
 
 # show the figure in an interactive window
 plt.show()
+
+
