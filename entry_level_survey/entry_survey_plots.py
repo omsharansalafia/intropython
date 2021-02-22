@@ -104,12 +104,10 @@ fig.text(x=0.5,y=0.96,s='Prerequisites survey results ({0:d} responses)'.format(
 
 # create pie chart from Q1 responses
 
-## extract data (responses are given as strings with items separated by ;)
-
 ## find frequency of each item
 labels,freqs = np.unique(data[cols[1]].astype(str),return_counts=True)
 
-# shorten long labels and change 'nan' to 'no answer'
+## shorten long labels and change 'nan' to 'no answer'
 for i in range(len(labels)):
     if len(labels[i])>15:
         labels[i] = labels[i][:15] + '...'
@@ -125,18 +123,15 @@ plt.pie(freqs,labels=labels,shadow=True)
 
 # create pie chart from Q2 responses
 
-## extract data (responses are given as strings with items separated by ;)
-
 ## find frequency of each item
 labels,freqs = np.unique(data[cols[2]].astype(str),return_counts=True)
 
-# shorten long labels and change 'nan' to 'no answer'
+## shorten long labels and change 'nan' to 'no answer'
 for i in range(len(labels)):
     if len(labels[i])>15:
         labels[i] = labels[i][:15] + '...'
     elif labels[i]=='nan':
         labels[i] = 'No answer'
-
 
 ## plot a pie chart in a subplot in the figure
 plt.subplot(222)
@@ -146,19 +141,15 @@ plt.pie(freqs,labels=labels,shadow=True)
 
 # create pie chart from Q3 responses
 
-## extract data (responses are given as strings with items separated by ;)
-
 ## find frequency of each item
 labels,freqs = np.unique(data[cols[3]].astype(str),return_counts=True)
 
-# shorten long labels and change 'nan' to 'no answer'
+## shorten long labels and change 'nan' to 'no answer'
 for i in range(len(labels)):
     if len(labels[i])>15:
         labels[i] = labels[i][:15] + '...'
     elif labels[i]=='nan':
         labels[i] = 'No answer'
-
-
 
 ## plot a pie chart in a subplot in the figure
 plt.subplot(223)
@@ -166,6 +157,10 @@ plt.title('Q3: ' + cols[3],fontsize=10)
 
 plt.pie(freqs,labels=labels,shadow=True)
 
+# save figure
+
 plt.savefig('prerequisites_survey_results.pdf')
+
+# show plot in an interactive window
 
 plt.show()
