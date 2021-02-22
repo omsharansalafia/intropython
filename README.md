@@ -1,6 +1,6 @@
 # intropython
 Code repository for the UniMiB Introductory Python course
 
-## Links to view lesson notes through nbviewer
+## Lesson notes
 
-[01 - Basics](https://nbviewer.jupyter.org/github/omsharansalafia/intropython/blob/main/notes/01_Basics.ipynb)
+The lesson notes are delivered in the form of jupyter notebooks. They are contained in the `notes` sibfolder, and can be previewed directly from github.
